@@ -131,7 +131,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               .map((relatedArticle) => (
                 <Link
                   key={relatedArticle.id}
-                  href={`article/${relatedArticle.id}`}
+                  href={`/article/${relatedArticle.id}`}
                   className="block p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md scale-101 transition-all duration-300"
                 >
                   <h4 className="font-medium text-gray-900 mb-2">
