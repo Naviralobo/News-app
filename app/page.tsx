@@ -6,7 +6,7 @@ const newsArticles = [
     title: "Revolutionary AI Breakthrough Changes Everything",
     excerpt:
       "Scientists have developed an AI that can predict the future with 999% accuracy",
-    category: "Technology",
+    category: "technology",
     publishedAt: "2025-06-15",
   },
   {
@@ -14,7 +14,7 @@ const newsArticles = [
     title: "Climate Solutions: The Unexpected Hero",
     excerpt:
       "A small startup discovers a way to reverse climate change using everyday materials",
-    category: "Environment",
+    category: "environment",
     publishedAt: "2025-06-11",
   },
   {
@@ -22,7 +22,7 @@ const newsArticles = [
     title: "Space Tourism Takes Off",
     excerpt:
       "Regular people are now booking flights to space less than the cost of a luxury car",
-    category: "Space",
+    category: "space",
     publishedAt: "2025-06-01",
   },
 ];
@@ -68,6 +68,39 @@ export default function HomePage() {
             </article>
           ))}
         </div>
+
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            Browse By Category
+          </h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            <Link
+              className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-center"
+              href="/category/technology"
+            >
+              <h3 className="font-semibold text-gray-900 mb-1">Technology</h3>
+              <p className="text-sm text-gray-600">Latest in Tech and AI</p>
+            </Link>
+            <Link
+              className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-center"
+              href="/category/environment"
+            >
+              <h3 className="font-semibold text-gray-900 mb-1">Environment</h3>
+              <p className="text-sm text-gray-600">
+                Climate and sustainability
+              </p>
+            </Link>
+            <Link
+              className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-center"
+              href="/category/space"
+            >
+              <h3 className="font-semibold text-gray-900 mb-1">Space</h3>
+              <p className="text-sm text-gray-600">
+                Space exploration and tourism
+              </p>
+            </Link>
+          </div>
+        </section>
       </div>
     </div>
   );

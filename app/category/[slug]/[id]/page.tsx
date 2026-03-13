@@ -1,6 +1,15 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+const categories = {
+  technology: { name: "Technology", description: "Latest in Tech and AI" },
+  environment: {
+    name: "Environment",
+    description: "Climate and sustainability",
+  },
+  space: { name: "Space", description: "space exploration and tourism" },
+};
+
 const newsArticles = [
   {
     id: 1,
@@ -64,20 +73,25 @@ const newsArticles = [
   },
 ];
 
-interface ArticlePageProps {
+interface CategoryArticlePageProps {
   params: {
     id: string;
+    slug: string;
   };
 }
 
-export default async function ArticlePage({ params }: ArticlePageProps) {
-  const { id } = await params;
+export default async function CategoryArticlePage({
+  params,
+}: CategoryArticlePageProps) {
+  const { id, slug } = await params;
+  const category = categories[slug as keyof typeof categories];
   const articleId = parseInt(id);
   const article = newsArticles.find((a) => {
+    console.log(a.id, articleId);
     return a.id === articleId;
   });
 
-  if (!article) {
+  if (!article || !category || article.category !== slug) {
     notFound();
   }
 
@@ -92,6 +106,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             Back to Home
           </Link>
         </nav>
+
         <header className="mb-8">
           <div className="flex items-center gap-4 mb-4">
             <span className="text-sm font-medium text-blue-600 bg-blue-100 px-3 py-2 rounded-full">

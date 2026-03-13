@@ -9,7 +9,7 @@ const newsArticles = [
     title: "Revolutionary AI Breakthrough Changes Everything",
     excerpt:
       "Scientists have developed an AI that can predict the future with 999% accuracy",
-    category: "Technology",
+    category: "technology",
     publishedAt: "2025-06-15",
   },
   {
@@ -17,7 +17,7 @@ const newsArticles = [
     title: "Climate Solutions: The Unexpected Hero",
     excerpt:
       "A small startup discovers a way to reverse climate change using everyday materials",
-    category: "Environment",
+    category: "environment",
     publishedAt: "2025-06-11",
   },
   {
@@ -25,7 +25,7 @@ const newsArticles = [
     title: "Space Tourism Takes Off",
     excerpt:
       "Regular people are now booking flights to space less than the cost of a luxury car",
-    category: "Space",
+    category: "space",
     publishedAt: "2025-06-01",
   },
 ];
