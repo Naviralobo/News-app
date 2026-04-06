@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ServerClientDemo from "../components/ServerClientDemo";
 
 export default function AboutPage() {
   return (
@@ -59,6 +60,8 @@ export default function AboutPage() {
                 for understanding modern web development
               </p>
             </div>
+
+            <ServerClientDemo />
           </div>
         </div>
       </div>
